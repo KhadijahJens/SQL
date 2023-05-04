@@ -1,0 +1,32 @@
+--Create plant store database
+
+CREATE TABLE plants (id INTEGER PRIMARY KEY, name TEXT, price NUMERIC, color TEXT, difficulty INTEGER);
+
+INSERT INTO plants VALUES
+(1,"pothos",10,"neon",3),
+(2,"diffenbachia",15,"green",6),
+(3,"purple passion",17,"purple",7),
+(4,"snake plant",23,"black",4),
+(5,"string of hearts",27,"pink",9),
+(6,"aloe vera",15,"green",6),
+(7,"cebu blue",28,"blue", 6),
+(8,"aglonema",20,"stripe",5),
+(9,"india rope",50,"green",7),
+(10,"watermelon",30,"green",8),
+(11,"bird's nest",35,"green",4),
+(12,"zz",25,"black",2),
+(13,"phildendron",27,"green",4),
+(14,"peace lily",16,"green",7),
+(15,"monstera",15,"green",1);
+
+--found total price of plants
+
+SELECT SUM(price) FROM plants;
+
+--ordered plants by price displaying only name, price, and color
+
+SELECT name,price,color FROM plants ORDER BY price;
+
+--found average difficulty of plants that are green
+
+SELECT AVG(difficulty) FROM plants WHERE color = "green";
