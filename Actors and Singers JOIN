@@ -1,0 +1,36 @@
+--created a table of common actors
+
+CREATE TABLE actors (id INTEGER PRIMARY KEY, name TEXT, famous_for TEXT, num_of_movies INTEGER);
+
+INSERT INTO actors VALUES 
+(1, "Justin Timberlake", "In Time", 39),
+(2, "Jennifer Hudson","Cats",29),
+(3, "Queen Latifah","Bringing Down The House",62),
+(4, "Will Smith","I Am Legend",60),
+(5, "Jennifer Lawrence","The Hunger Games",44),
+(6, "Jamie Foxx", "Collateral",62),
+(7, "Rhianna","Battleship", 16),
+(8, "Jennifer Lopez","Honey", 48),
+(9, "Chris Evans", "The Avengers", 57);
+
+--created a table of common singers
+
+CREATE TABLE singers (id INTEGER PRIMARY KEY, name TEXT, famous_for TEXT, num_of_songs INTEGER);
+
+INSERT INTO singers VALUES
+(1, "Justin Timberlake", "Cry Me A River", 75),
+(2, "Jennifer Hudson","Spotlight",20),
+(3, "Queen Latifah","U.N.I.T.Y",23),
+(4, "Will Smith","Summertime",60),
+(5, "Barbara Streisand","Woman In Love",117),
+(6, "Jamie Foxx","Blame It",18),
+(7, "Rhianna","Umbrella",53),
+(8, "Jennifer Lopez","Dance Again", 65),
+(9, "Adele", "Hello", 17);
+
+--joined the 2 tables that have famous people that are actors and singers and identified the song the they are known for if the have been in more than 50 movies
+
+SELECT actors.name, singers.famous_for 
+FROM actors
+JOIN singers ON actors.name = singers.name
+WHERE actors.num_of_movies > 50;
