@@ -1,4 +1,4 @@
---created a table of common actors
+--created a table of common actors 
 
 CREATE TABLE actors (id INTEGER PRIMARY KEY, name TEXT, famous_for TEXT, num_of_movies INTEGER);
 
