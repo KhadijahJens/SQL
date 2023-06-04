@@ -17,7 +17,8 @@ INSERT INTO plants VALUES
 (12,"zz",25,"black",2),
 (13,"phildendron",27,"green",4),
 (14,"peace lily",16,"green",7),
-(15,"monstera",15,"green",1);
+(15,"monstera",15,"green",1),
+(16,"polka dot plant","pink", 4);
 
 --found total price of plants
 
